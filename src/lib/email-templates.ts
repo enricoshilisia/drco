@@ -20,8 +20,8 @@ function layout(title: string, inner: string) {
 ${inner}
 </td></tr>
 <tr><td style="background:#0A141F;padding:20px 32px;font-family:'Segoe UI',Arial,sans-serif;font-size:12px;color:#8C99AD;line-height:1.6;">
-${esc(site.legalName)} · ${esc(site.address.street)}, ${esc(site.address.city)}<br>
-${esc(site.phone)} · <a href="mailto:${site.email}" style="color:#C9A25C;">${esc(site.email)}</a> · <a href="${site.url}" style="color:#C9A25C;">${esc(site.url.replace(/^https?:\/\//, ""))}</a><br>
+${esc(site.legalName)} · ${esc(site.address.building)}, ${esc(site.address.street)}, ${esc(site.address.city)}<br>
+Tel ${esc(site.phone)} · ${esc(site.phone2)} · Cell ${esc(site.mobile)}<br><a href="mailto:${site.email}" style="color:#C9A25C;">${esc(site.email)}</a> · <a href="${site.url}" style="color:#C9A25C;">${esc(site.url.replace(/^https?:\/\//, ""))}</a><br>
 This email and any attachments are confidential and may be legally privileged.
 </td></tr>
 </table></td></tr></table></body></html>`;

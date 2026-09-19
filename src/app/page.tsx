@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CountUp } from "@/components/CountUp";
 import { ArrowRight, PracticeIcon, QuoteMark } from "@/components/icons";
 import { CtaBand, FaqList, Portrait, SectionHeading } from "@/components/ui";
 import { advocates, generalFaqs, posts, practiceAreas, results, testimonial } from "@/lib/content";
@@ -37,9 +38,9 @@ export default function Home() {
       {/* TRUST STRIP */}
       <section aria-label="Firm at a glance" className="border-b border-line bg-white">
         <div className="container-x grid grid-cols-2 gap-6 py-10 lg:grid-cols-4">
-          {site.stats.map((s) => (
+          {site.stats.map((s, i) => (
             <div key={s.label} className="flex flex-col gap-1">
-              <span className="font-serif text-[34px] text-navy-900">{s.value}</span>
+              <CountUp value={s.value} delay={i * 150} className="font-serif text-[34px] text-navy-900" />
               <span className="text-[13px] tracking-[0.03em] text-stone-light">{s.label}</span>
             </div>
           ))}
@@ -122,7 +123,7 @@ export default function Home() {
         <div className="container-x py-24">
           <SectionHeading eyebrow="Our Chambers" title="A calm, private setting for confidential counsel.">
             <p className="text-base leading-[1.7] text-stone">
-              Meet us at our offices in {site.address.locality}, {site.address.city}, or by Microsoft Teams wherever you are.
+              Meet us at our offices on {site.address.street}, {site.address.city}, or by Microsoft Teams wherever you are.
             </p>
           </SectionHeading>
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:grid-rows-2">

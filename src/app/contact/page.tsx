@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Us — Book a Consultation",
-  description: `Book a confidential consultation with ${site.name} in ${site.address.locality}, Nairobi. Call ${site.phone}, message us on WhatsApp or send an enquiry online.`,
+  description: `Book a confidential consultation with ${site.name} on ${site.address.street}, Nairobi. Call ${site.phone}, message us on WhatsApp or send an enquiry online.`,
   alternates: { canonical: "/contact" },
 };
 
@@ -39,7 +39,12 @@ export default function ContactPage() {
             <div className="flex flex-col gap-5 bg-navy-900 p-7 text-mist">
               <div>
                 <h2 className="eyebrow mb-2 text-gold-500">Call</h2>
-                <a href={site.phoneHref} className="font-serif text-2xl text-ivory hover:text-gold-500">{site.phone}</a>
+                <a href={site.phoneHref} className="block font-serif text-2xl text-ivory hover:text-gold-500">{site.phone}</a>
+                <a href={site.phone2Href} className="mt-1 block font-serif text-2xl text-ivory hover:text-gold-500">{site.phone2}</a>
+                <a href={site.mobileHref} className="mt-1 block font-serif text-2xl text-ivory hover:text-gold-500">
+                  <span className="mr-2 text-sm font-sans tracking-wide text-gold-500 uppercase">Cell</span>
+                  {site.mobile}
+                </a>
               </div>
               <div>
                 <h2 className="eyebrow mb-2 text-gold-500">Email</h2>
@@ -54,9 +59,13 @@ export default function ContactPage() {
               <div>
                 <h2 className="eyebrow mb-2 text-gold-500">Visit</h2>
                 <address className="not-italic text-ivory">
+                  {site.address.building}
+                  <br />
                   {site.address.street}
                   <br />
-                  {site.address.locality}, {site.address.city}
+                  {site.address.poBox}
+                  <br />
+                  {site.address.city}, {site.address.countryName}
                 </address>
               </div>
               <div>

@@ -55,7 +55,7 @@ If the `MS_*` variables are missing (for example in local development), emails a
 
 The site ships with polished demo content so it can be presented. Confirm or replace the following with the firm:
 
-- **Contact details:** the phone number, WhatsApp number, office address, map and email domain in `site.ts` are samples.
+- **Contact details:** confirm the cell number (+254 720 020 444, also used for WhatsApp), the map pin and the email domain in `site.ts`.
 - **Stats strip** ("18+ years", "600+ matters", "3 countries") and **founding year**.
 - **Advocates:** David Otieno and Amina Hassan are sample profiles. Also complete Dr. Kenyariri's education and admissions.
 - **Representative results and testimonial:** these must be real and anonymised, and must comply with LSK advertising rules.

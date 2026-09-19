@@ -10,18 +10,24 @@ export const site = {
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.drcokenyariri.co.ke").replace(/\/$/, ""),
   locale: "en_KE",
   foundingYear: 2008,
-  phone: "+254 700 000 000",
-  phoneHref: "tel:+254700000000",
-  whatsapp: "254700000000", // international format, digits only
+  phone: "+254 (0) 20 22 48 942",
+  phoneHref: "tel:+254202248942",
+  phone2: "+254 (0) 20 22 47 871",
+  phone2Href: "tel:+254202247871",
+  mobile: "+254 720 020 444",
+  mobileHref: "tel:+254720020444",
+  whatsapp: "254720020444", // international format, digits only
   email: "info@drcokenyariri.co.ke",
   address: {
-    street: "Merchant Square, Riverside Drive",
-    locality: "Westlands",
+    building: "105 Sandalwood Garden",
+    street: "Argwings Kodhek Road",
+    poBox: "P.O. Box 2121-00202 KNH",
     city: "Nairobi",
-    postalCode: "00800",
+    postalCode: "00202",
     country: "KE",
+    countryName: "Kenya",
   },
-  geo: { lat: -1.2676, lng: 36.8108 },
+  geo: { lat: -1.2985, lng: 36.7894 },
   hours: [{ days: "Monday – Friday", time: "8:00 – 17:30" }, { days: "Saturday", time: "9:00 – 13:00 (by appointment)" }],
   openingHoursSpec: [
     { dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "17:30" },
@@ -31,7 +37,7 @@ export const site = {
   // Microsoft Bookings page (included with Microsoft 365 Business). Leave empty to hide.
   bookingsUrl: process.env.NEXT_PUBLIC_BOOKINGS_URL ?? "",
   mapEmbedUrl:
-    "https://www.google.com/maps?q=Merchant+Square+Riverside+Drive+Nairobi&output=embed",
+    "https://www.google.com/maps?q=Sandalwood+Garden,+Argwings+Kodhek+Road,+Nairobi&output=embed",
   social: {
     linkedin: "https://www.linkedin.com/company/drco-kenyariri-advocates",
     x: "https://x.com/drcokenyariri",

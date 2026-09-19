@@ -73,7 +73,7 @@ export default function AboutPage() {
 
       <section className="bg-ivory">
         <div className="container-x py-24">
-          <SectionHeading eyebrow="Our Chambers" title={`${site.address.locality}, ${site.address.city}`} />
+          <SectionHeading eyebrow="Our Chambers" title={`${site.address.street}, ${site.address.city}`} />
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {images.office.map((img) => (
               <div key={img.src} className="relative aspect-[4/5] overflow-hidden rounded-[3px]">
