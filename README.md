@@ -34,7 +34,7 @@ npm run build && npm start   # production
 5. Set `MS_SENDER_MAILBOX` to the mailbox the site sends from, e.g. a shared mailbox `website@…`, which needs no extra licence.
 6. **Recommended:** restrict the app so it can only send as that mailbox. In Exchange Online PowerShell:
    ```powershell
-   New-DistributionGroup -Name "Website Mailer Senders" -Type Security -Members website@drcokenyariri.co.ke
+   New-DistributionGroup -Name "Website Mailer Senders" -Type Security -Members website@drcokenyaririadvocatesllp.africa
    New-ApplicationAccessPolicy -AppId <MS_CLIENT_ID> -PolicyScopeGroupId "Website Mailer Senders" -AccessRight RestrictAccess -Description "Website mailer"
    ```
 

@@ -265,7 +265,7 @@ export const advocates: Advocate[] = [
     education: ["Doctor of Laws (LL.D), University of South Africa (UNISA), Pretoria"],
     admissions: ["Advocate of the High Court of Kenya"],
     practiceSlugs: ["international-trade-investment", "corporate-commercial", "litigation-dispute-resolution"],
-    email: "info@drcokenyariri.co.ke",
+    email: "kenyariri@drcokenyaririadvocatesllp.africa",
   },
   {
     slug: "david-otieno",
@@ -279,7 +279,7 @@ export const advocates: Advocate[] = [
     education: ["LL.M, University of London", "LL.B, University of Nairobi"],
     admissions: ["Advocate of the High Court of Kenya", "Advocate of the High Court of Uganda"],
     practiceSlugs: ["corporate-commercial", "immigration-regulatory"],
-    email: "david@drcokenyariri.co.ke",
+    email: "david@drcokenyaririadvocatesllp.africa",
   },
   {
     slug: "amina-hassan",
@@ -293,7 +293,7 @@ export const advocates: Advocate[] = [
     education: ["LL.B, Moi University", "Postgraduate Diploma in Law, Kenya School of Law"],
     admissions: ["Advocate of the High Court of Kenya"],
     practiceSlugs: ["family-succession", "employment-labour"],
-    email: "amina@drcokenyariri.co.ke",
+    email: "amina@drcokenyaririadvocatesllp.africa",
   },
 ];
 

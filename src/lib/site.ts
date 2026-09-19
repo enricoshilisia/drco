@@ -7,7 +7,7 @@ export const site = {
   tagline: "Considered counsel for consequential matters.",
   description:
     "DRCO Kenyariri Advocates LLP is a Nairobi law firm representing individuals, families and enterprises across East Africa in litigation, corporate, property, family, employment and immigration matters.",
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.drcokenyariri.co.ke").replace(/\/$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.drcokenyaririadvocatesllp.africa").replace(/\/$/, ""),
   locale: "en_KE",
   foundingYear: 2008,
   phone: "+254 (0) 20 22 48 942",
@@ -17,7 +17,7 @@ export const site = {
   mobile: "+254 720 020 444",
   mobileHref: "tel:+254720020444",
   whatsapp: "254720020444", // international format, digits only
-  email: "info@drcokenyariri.co.ke",
+  email: "kenyariri@drcokenyaririadvocatesllp.africa",
   address: {
     building: "105 Sandalwood Garden",
     street: "Argwings Kodhek Road",
