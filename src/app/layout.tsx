@@ -53,6 +53,11 @@ export const viewport: Viewport = { themeColor: "#0E1A2B" };
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en-KE" className={`${fraunces.variable} ${workSans.variable} antialiased`}>
+      <head>
+        {/* Marks the page as JS-capable before first paint, so scroll-reveal
+            elements can start hidden without a flash — and stay visible if JS is off. */}
+        <script dangerouslySetInnerHTML={{ __html: `document.documentElement.classList.add("js")` }} />
+      </head>
       <body className="flex min-h-dvh flex-col">
         <JsonLd data={legalServiceSchema()} />
         <Header />

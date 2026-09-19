@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CtaBand, PageHero, Portrait } from "@/components/ui";
+import { Reveal } from "@/components/Reveal";
 import { advocates } from "@/lib/content";
 import { images } from "@/lib/images";
 
@@ -23,8 +24,8 @@ export default function AdvocatesPage() {
       />
       <section className="bg-ivory">
         <div className="container-x grid gap-10 py-24 sm:grid-cols-2 lg:grid-cols-3">
-          {advocates.map((a) => (
-            <Link key={a.slug} href={`/advocates/${a.slug}`} className="group flex flex-col gap-5">
+          {advocates.map((a, i) => (
+            <Reveal key={a.slug} delay={i * 120}><Link href={`/advocates/${a.slug}`} className="group flex flex-col gap-5">
               <Portrait name={a.name} className="transition-colors group-hover:bg-parchment" />
               <div className="flex flex-col gap-1">
                 <h2 className="text-[22px] text-navy-900 group-hover:text-gold-700">{a.name}</h2>
@@ -33,7 +34,7 @@ export default function AdvocatesPage() {
                 </span>
                 <span className="mt-1.5 text-[13px] text-stone-light">{a.credentials}</span>
               </div>
-            </Link>
+            </Link></Reveal>
           ))}
         </div>
       </section>

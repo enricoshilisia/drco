@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CtaBand, PageHero } from "@/components/ui";
+import { Reveal } from "@/components/Reveal";
 import { getAdvocate, getPractice, posts } from "@/lib/content";
 import { images } from "@/lib/images";
 
@@ -26,8 +27,8 @@ export default function InsightsPage() {
       />
       <section className="bg-ivory">
         <div className="container-x grid gap-8 py-24 md:grid-cols-2 lg:grid-cols-3">
-          {sorted.map((p) => (
-            <Link key={p.slug} href={`/insights/${p.slug}`} className="card group flex flex-col overflow-hidden">
+          {sorted.map((p, i) => (
+            <Reveal key={p.slug} delay={(i % 3) * 110} className="flex"><Link href={`/insights/${p.slug}`} className="card group flex w-full flex-col overflow-hidden">
               <div className="relative aspect-[16/10]">
                 <Image src={(images.posts[p.slug] ?? images.library).src} alt="" fill sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw" className="object-cover" />
               </div>
@@ -39,7 +40,7 @@ export default function InsightsPage() {
                   {getAdvocate(p.author)?.name} · <time dateTime={p.date}>{fmt(p.date)}</time> · {p.readingMinutes} min read
                 </p>
               </div>
-            </Link>
+            </Link></Reveal>
           ))}
         </div>
       </section>

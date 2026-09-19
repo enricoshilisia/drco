@@ -82,6 +82,40 @@
   .field {
     @apply w-full rounded-[2px] border border-line bg-white px-4 py-3 text-[15px] text-ink placeholder:text-stone-light/70 focus:border-gold-600 focus:outline-none;
   }
+  /* Scroll reveal — only active once JS marks <html class="js">, so content
+     stays visible without JS. */
+  .js .reveal {
+    opacity: 0;
+    transition:
+      opacity 0.75s cubic-bezier(0.22, 0.61, 0.36, 1),
+      transform 0.75s cubic-bezier(0.22, 0.61, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .js .reveal-up {
+    transform: translateY(28px);
+  }
+  .js .reveal-left {
+    transform: translateX(-32px);
+  }
+  .js .reveal-right {
+    transform: translateX(32px);
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  /* Softer, quicker version when the visitor asks for reduced motion. */
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal {
+      transition-duration: 0.4s;
+      transition-delay: 0ms !important;
+    }
+    .js .reveal-up,
+    .js .reveal-left,
+    .js .reveal-right {
+      transform: translateY(8px);
+    }
+  }
   .prose-legal p {
     @apply mb-5 text-[17px] leading-[1.8] text-ink-soft;
   }

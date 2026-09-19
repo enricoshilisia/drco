@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CountUp } from "@/components/CountUp";
+import { Reveal } from "@/components/Reveal";
 import { ArrowRight, PracticeIcon, QuoteMark } from "@/components/icons";
 import { CtaBand, FaqList, Portrait, SectionHeading } from "@/components/ui";
 import { advocates, generalFaqs, posts, practiceAreas, results, testimonial } from "@/lib/content";
@@ -39,10 +40,10 @@ export default function Home() {
       <section aria-label="Firm at a glance" className="border-b border-line bg-white">
         <div className="container-x grid grid-cols-2 gap-6 py-10 lg:grid-cols-4">
           {site.stats.map((s, i) => (
-            <div key={s.label} className="flex flex-col gap-1">
+            <Reveal key={s.label} delay={i * 90} className="flex flex-col gap-1">
               <CountUp value={s.value} delay={i * 150} className="font-serif text-[34px] text-navy-900" />
-              <span className="text-[13px] tracking-[0.03em] text-stone-light">{s.label}</span>
-            </div>
+              <span className="block text-[13px] tracking-[0.03em] text-stone-light">{s.label}</span>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -52,8 +53,9 @@ export default function Home() {
         <div className="container-x py-24">
           <SectionHeading eyebrow="What We Do" title="Practice Areas" />
           <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
-            {practiceAreas.map((p) => (
-              <Link key={p.slug} href={`/practice-areas/${p.slug}`} className="card group flex flex-col gap-4 px-7 py-9">
+            {practiceAreas.map((p, i) => (
+              <Reveal key={p.slug} delay={(i % 3) * 110} className="flex">
+              <Link href={`/practice-areas/${p.slug}`} className="card group flex w-full flex-col gap-4 px-7 py-9">
                 <PracticeIcon name={p.icon} className="size-[30px] text-gold-600" />
                 <h3 className="text-xl font-medium text-navy-900">{p.title}</h3>
                 <p className="text-[15px] leading-[1.7] text-stone">{p.short}</p>
@@ -61,6 +63,7 @@ export default function Home() {
                   Learn more <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                 </span>
               </Link>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -69,10 +72,10 @@ export default function Home() {
       {/* ABOUT */}
       <section className="bg-navy-900">
         <div className="container-x grid items-center gap-16 py-24 lg:grid-cols-2">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[3px] border border-navy-600">
+          <Reveal from="left" className="relative aspect-[4/5] w-full overflow-hidden rounded-[3px] border border-navy-600">
             <Image src={images.chambers.src} alt={images.chambers.alt} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
-          </div>
-          <div className="flex flex-col gap-6">
+          </Reveal>
+          <Reveal from="right" delay={120} className="flex flex-col gap-6">
             <span className="eyebrow text-gold-500">Our Firm</span>
             <h2 className="text-[34px] leading-[1.25] text-ivory">Built on judgment, not volume.</h2>
             <p className="text-base leading-[1.8] font-light text-mist">
@@ -86,7 +89,7 @@ export default function Home() {
             <Link href="/about" className="mt-2 flex items-center gap-2.5 text-sm font-medium tracking-[0.03em] text-gold-500 uppercase hover:text-gold-400">
               About the Firm <ArrowRight />
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -95,11 +98,11 @@ export default function Home() {
         <div className="container-x py-24">
           <SectionHeading eyebrow="Track Record" title="Representative Results" />
           <div className="grid gap-7 md:grid-cols-3">
-            {results.map((r) => (
-              <article key={r.tag} className="flex flex-col gap-3.5 border-t-2 border-gold-500 bg-white px-7 py-8">
+            {results.map((r, i) => (
+              <Reveal key={r.tag} delay={i * 110}><article className="flex flex-col gap-3.5 border-t-2 border-gold-500 bg-white px-7 py-8">
                 <span className="text-xs tracking-[0.08em] text-gold-700 uppercase">{r.tag}</span>
                 <p className="text-base leading-[1.7] text-ink-soft">{r.text}</p>
-              </article>
+              </article></Reveal>
             ))}
           </div>
           <p className="mt-6 text-xs text-stone-light">Past results do not guarantee a similar outcome in any future matter.</p>
@@ -108,14 +111,14 @@ export default function Home() {
 
       {/* TESTIMONIAL */}
       <section className="bg-sand">
-        <figure className="mx-auto flex max-w-[900px] flex-col items-center gap-6 px-5 py-24 text-center">
+        <Reveal><figure className="mx-auto flex max-w-[900px] flex-col items-center gap-6 px-5 py-24 text-center">
           <QuoteMark className="text-gold-500" />
           <blockquote className="max-w-[720px] font-serif text-2xl leading-[1.6] text-[#23211c] italic">{testimonial.quote}</blockquote>
           <figcaption className="flex flex-col gap-0.5">
             <span className="text-[15px] font-semibold text-[#23211c]">{testimonial.who}</span>
             <span className="text-[13px] text-stone-light">{testimonial.context}</span>
           </figcaption>
-        </figure>
+        </figure></Reveal>
       </section>
 
       {/* OFFICE */}
@@ -128,12 +131,13 @@ export default function Home() {
           </SectionHeading>
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:grid-rows-2">
             {images.office.map((img, i) => (
-              <div
+              <Reveal
                 key={img.src}
+                delay={i * 110}
                 className={`relative overflow-hidden rounded-[3px] ${i === 0 ? "col-span-2 row-span-2 aspect-square lg:aspect-auto" : "aspect-[4/3]"} ${i === 3 ? "col-span-2" : ""}`}
               >
                 <Image src={img.src} alt={img.alt} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover transition-transform duration-700 hover:scale-[1.03]" />
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -144,8 +148,8 @@ export default function Home() {
         <div className="container-x py-24">
           <SectionHeading eyebrow="Our People" title="Advocates" />
           <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-            {advocates.map((a) => (
-              <Link key={a.slug} href={`/advocates/${a.slug}`} className="group flex flex-col gap-4">
+            {advocates.map((a, i) => (
+              <Reveal key={a.slug} delay={i * 120}><Link href={`/advocates/${a.slug}`} className="group flex flex-col gap-4">
                 <Portrait name={a.name} className="transition-colors group-hover:bg-parchment" />
                 <div className="flex flex-col gap-1">
                   <h3 className="text-[19px] font-medium text-navy-900 group-hover:text-gold-700">{a.name}</h3>
@@ -154,7 +158,7 @@ export default function Home() {
                   </span>
                   <span className="mt-1.5 text-[13px] text-stone-light">{a.credentials}</span>
                 </div>
-              </Link>
+              </Link></Reveal>
             ))}
           </div>
         </div>
@@ -170,8 +174,8 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid gap-7 md:grid-cols-3">
-            {latest.map((p) => (
-              <Link key={p.slug} href={`/insights/${p.slug}`} className="card group flex flex-col overflow-hidden">
+            {latest.map((p, i) => (
+              <Reveal key={p.slug} delay={i * 110} className="flex"><Link href={`/insights/${p.slug}`} className="card group flex w-full flex-col overflow-hidden">
                 <div className="relative aspect-[16/10]">
                   <Image src={(images.posts[p.slug] ?? images.library).src} alt="" fill sizes="(min-width:768px) 33vw, 100vw" className="object-cover" />
                 </div>
@@ -182,7 +186,7 @@ export default function Home() {
                   <h3 className="text-xl leading-snug text-navy-900 group-hover:text-gold-700">{p.title}</h3>
                   <p className="text-[15px] leading-[1.7] text-stone">{p.excerpt}</p>
                 </div>
-              </Link>
+              </Link></Reveal>
             ))}
           </div>
         </div>
@@ -192,7 +196,7 @@ export default function Home() {
       <section className="bg-white">
         <div className="container-x grid gap-12 py-24 lg:grid-cols-[1fr_2fr]">
           <SectionHeading eyebrow="Questions" title="Frequently asked" />
-          <FaqList faqs={generalFaqs} />
+          <Reveal delay={80}><FaqList faqs={generalFaqs} /></Reveal>
         </div>
       </section>
 

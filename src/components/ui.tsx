@@ -4,6 +4,7 @@ import type { Photo } from "@/lib/images";
 import { breadcrumbSchema, JsonLd } from "@/lib/jsonld";
 import { site } from "@/lib/site";
 import { WhatsAppIcon } from "./icons";
+import { Reveal } from "./Reveal";
 
 export function SectionHeading({
   eyebrow,
@@ -19,11 +20,11 @@ export function SectionHeading({
   children?: React.ReactNode;
 }) {
   return (
-    <div className="mb-12 flex max-w-[640px] flex-col gap-3.5 lg:mb-14">
+    <Reveal className="mb-12 flex max-w-[640px] flex-col gap-3.5 lg:mb-14">
       <span className={`eyebrow ${tone === "light" ? "text-gold-700" : "text-gold-500"}`}>{eyebrow}</span>
       <Tag className={`text-3xl sm:text-4xl ${tone === "light" ? "text-navy-900" : "text-ivory"}`}>{title}</Tag>
       {children}
-    </div>
+    </Reveal>
   );
 }
 
@@ -87,7 +88,7 @@ export function PageHero({
 export function CtaBand({ title = "Discuss your matter with an advocate." }: { title?: string }) {
   return (
     <section className="bg-navy-900">
-      <div className="container-x flex flex-col gap-8 py-20 lg:flex-row lg:items-center lg:justify-between">
+      <Reveal className="container-x flex flex-col gap-8 py-20 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex max-w-[540px] flex-col gap-3">
           <h2 className="text-3xl text-ivory">{title}</h2>
           <p className="text-base leading-[1.7] font-light text-mist">
@@ -98,7 +99,7 @@ export function CtaBand({ title = "Discuss your matter with an advocate." }: { t
           <Link href="/contact#consultation" className="btn-gold">Request a Consultation</Link>
           <a href={site.phoneHref} className="btn-ghost-dark">{site.phone}</a>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

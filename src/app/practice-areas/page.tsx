@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, PracticeIcon } from "@/components/icons";
 import { CtaBand, PageHero } from "@/components/ui";
+import { Reveal } from "@/components/Reveal";
 import { practiceAreas } from "@/lib/content";
 import { images } from "@/lib/images";
 
@@ -25,10 +26,10 @@ export default function PracticeAreasPage() {
       />
       <section className="bg-ivory">
         <div className="container-x grid gap-8 py-24 md:grid-cols-2">
-          {practiceAreas.map((p) => {
+          {practiceAreas.map((p, i) => {
             const photo = images.practice[p.slug] ?? images.library;
             return (
-              <Link key={p.slug} href={`/practice-areas/${p.slug}`} className="card group flex flex-col overflow-hidden">
+              <Reveal key={p.slug} delay={(i % 2) * 120} className="flex"><Link href={`/practice-areas/${p.slug}`} className="card group flex w-full flex-col overflow-hidden">
                 <div className="relative aspect-[16/8]">
                   <Image src={photo.src} alt={photo.alt} fill sizes="(min-width:768px) 50vw, 100vw" className="object-cover" />
                 </div>
@@ -50,7 +51,7 @@ export default function PracticeAreasPage() {
                     Explore {p.title} <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                   </span>
                 </div>
-              </Link>
+              </Link></Reveal>
             );
           })}
         </div>
