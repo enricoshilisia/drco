@@ -6,8 +6,8 @@ import { useEffect, useRef } from "react";
 // Server HTML contains the final value, so search engines and no-JS visitors see
 // the real figure. Every counter takes the same duration, so large and small
 // numbers land together; the ease-out makes them slow down as they arrive.
-const DURATION_MS = 2800;
-const REDUCED_DURATION_MS = 2400; // counting is mild motion, so shorten rather than skip
+const DURATION_MS = 5500;
+const REDUCED_DURATION_MS = 5500; // counting is mild motion, so shorten rather than skip
 const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
 
 export function CountUp({ value, delay = 0, className }: { value: string; delay?: number; className?: string }) {
