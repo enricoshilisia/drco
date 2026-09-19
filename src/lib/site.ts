@@ -14,7 +14,7 @@ export const site = {
   phoneHref: "tel:+254202248942",
   phone2: "+254 (0) 20 22 47 871",
   phone2Href: "tel:+254202247871",
-  mobile: "+254 720 020 444",
+  mobile: "+254 (0) 720 020 444",
   mobileHref: "tel:+254720020444",
   whatsapp: "254720020444", // international format, digits only
   email: "kenyariri@drcokenyaririadvocatesllp.africa",
