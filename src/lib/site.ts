@@ -17,7 +17,9 @@ export const site = {
   mobile: "+254 (0) 720 020 444",
   mobileHref: "tel:+254720020444",
   whatsapp: "254720020444", // international format, digits only
-  email: "kenyariri@drcokenyaririadvocatesllp.africa",
+  email: "info@drcokenyaririadvocatesllp.africa",
+  // Address for data-protection requests under the Data Protection Act, 2019.
+  privacyEmail: "legal@drcokenyaririadvocatesllp.africa",
   address: {
     building: "105 Sandalwood Garden",
     street: "Argwings Kodhek Road",

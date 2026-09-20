@@ -119,6 +119,19 @@
   .prose-legal p {
     @apply mb-5 text-[17px] leading-[1.8] text-ink-soft;
   }
+  .prose-legal ul {
+    @apply mb-6 flex list-none flex-col gap-3 pl-0;
+  }
+  .prose-legal li {
+    @apply relative pl-6 text-[16px] leading-[1.75] text-ink-soft;
+  }
+  .prose-legal li::before {
+    content: "";
+    @apply absolute top-[0.7em] left-0 h-px w-3.5 bg-gold-600;
+  }
+  .prose-legal strong {
+    @apply font-semibold text-navy-900;
+  }
   .prose-legal h2 {
     @apply mt-10 mb-4 text-2xl text-navy-900;
   }
