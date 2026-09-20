@@ -16,6 +16,7 @@ function FieldError({ errors }: { errors?: string[] }) {
 export function InquiryForm({ defaultPractice = "" }: { defaultPractice?: string }) {
   const [state, action, pending] = useActionState(submitInquiry, initial);
   const [startedAt] = useState(() => Date.now());
+  const [consented, setConsented] = useState(false);
   const pathname = usePathname();
   const fe = state.fieldErrors ?? {};
 
@@ -121,7 +122,15 @@ export function InquiryForm({ defaultPractice = "" }: { defaultPractice?: string
       </label>
 
       <label className="flex items-start gap-3 text-sm leading-relaxed text-stone">
-        <input type="checkbox" name="consent" required className="mt-1 size-4 accent-gold-600" aria-invalid={!!fe.consent} />
+        <input
+          type="checkbox"
+          name="consent"
+          required
+          checked={consented}
+          onChange={(e) => setConsented(e.target.checked)}
+          className="mt-1 size-4 accent-gold-600"
+          aria-invalid={!!fe.consent}
+        />
         <span>
           I consent to {`DRCO Kenyariri Advocates`} processing my information to respond to this enquiry, as described in the{" "}
           <Link href="/privacy" className="text-gold-700 underline underline-offset-2">
@@ -138,9 +147,21 @@ export function InquiryForm({ defaultPractice = "" }: { defaultPractice?: string
         </p>
       )}
 
-      <button type="submit" disabled={pending} className="btn-navy w-full sm:w-auto sm:justify-self-start disabled:opacity-60">
-        {pending ? "Sending…" : "Request a Consultation"}
-      </button>
+      <div className="flex flex-col gap-2 sm:items-start">
+        <button
+          type="submit"
+          disabled={pending || !consented}
+          aria-describedby={!consented ? "consent-hint" : undefined}
+          className="btn-navy w-full sm:w-auto disabled:cursor-not-allowed disabled:bg-navy-900/40"
+        >
+          {pending ? "Sending…" : "Request a Consultation"}
+        </button>
+        {!consented && (
+          <p id="consent-hint" className="text-[13px] text-stone-light">
+            Please tick the box above to confirm you have read the privacy notice.
+          </p>
+        )}
+      </div>
     </form>
   );
 }
