@@ -20,7 +20,7 @@ export function legalServiceSchema() {
     alternateName: site.name,
     description: site.description,
     url: site.url,
-    logo: absoluteUrl("/icon.svg"),
+    logo: absoluteUrl("/logo.png"),
     image: absoluteUrl("/opengraph-image"),
     telephone: [site.phone, site.phone2, site.mobile],
     email: site.email,

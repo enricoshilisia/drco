@@ -48,7 +48,7 @@ If the `MS_*` variables are missing (for example in local development), emails a
 | Practice areas, advocates, results, testimonial, FAQs, articles | `src/lib/content.ts` |
 | Photos | `src/lib/images.ts` |
 | Colours and fonts | `src/app/globals.css`, `src/app/layout.tsx` |
-| Logo | `src/components/Logo.tsx` (currently a "DK" monogram), `src/app/icon.svg` |
+| Logo | `public/logo.png` (transparent), `public/logo-tile.png` (emails, share image), `src/app/icon.png` + `apple-icon.png` (favicons), shown by `src/components/Logo.tsx` |
 | Email wording | `src/lib/email-templates.ts` |
 
 ## Before going live: replace demo content
@@ -67,16 +67,15 @@ The Unsplash photos are free to use under the Unsplash licence, but the site wil
 
 | # | Image | Where it's used | Suggested size |
 |---|---|---|---|
-| 1 | **Firm logo** (SVG preferred, plus a square version for the favicon) | Header, footer, emails, favicon, share image | vector / 512×512 |
-| 2 | **Professional headshot of Dr. Christopher O. Kenyariri** | Advocates, profile page, article bylines | 1200×1600 (3:4), plain background |
-| 3 | **Headshots of every other advocate**, same style and lighting | Advocates pages | 1200×1600 (3:4) |
-| 4 | **Office exterior / building** (e.g. the building entrance or signage) | Contact hero, About | 2400×1600 |
-| 5 | **Reception / waiting area** | Office gallery, Contact | 2000×1500 |
-| 6 | **Boardroom / meeting room** | Home "Our Firm", office gallery | 2000×2500 (portrait) |
-| 7 | **Advocates at work** (a meeting, reviewing documents, candid) | Office gallery, About | 2000×1500 |
-| 8 | **Team group photo** | About page | 2400×1400 |
-| 9 | **The firm's library or bookshelves** (optional) | Page headers | 2400×1400 |
-| 10 | **Nairobi skyline** (optional, the Unsplash one is fine) | Home hero | 2400×1400 |
+| 1 | **Professional headshot of Dr. Christopher O. Kenyariri** | Advocates, profile page, article bylines | 1200×1600 (3:4), plain background |
+| 2 | **Headshots of every other advocate**, same style and lighting | Advocates pages | 1200×1600 (3:4) |
+| 3 | **Office exterior / building** (e.g. the building entrance or signage) | Contact hero, About | 2400×1600 |
+| 4 | **Reception / waiting area** | Office gallery, Contact | 2000×1500 |
+| 5 | **Boardroom / meeting room** | Home "Our Firm", office gallery | 2000×2500 (portrait) |
+| 6 | **Advocates at work** (a meeting, reviewing documents, candid) | Office gallery, About | 2000×1500 |
+| 7 | **Team group photo** | About page | 2400×1400 |
+| 8 | **The firm's library or bookshelves** (optional) | Page headers | 2400×1400 |
+| 9 | **Nairobi skyline** (optional, the Unsplash one is fine) | Home hero | 2400×1400 |
 
 Until real headshots arrive, advocates show an elegant monogram card. Avoid using stock photos of people as your named advocates.
 

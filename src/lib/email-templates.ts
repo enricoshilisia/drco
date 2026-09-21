@@ -12,7 +12,7 @@ function layout(title: string, inner: string) {
 <tr><td align="center">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#FFFFFF;border:1px solid #E7E0D0;">
 <tr><td style="background:#0E1A2B;padding:24px 32px;">
-<span style="display:inline-block;border:1.5px solid #C9A25C;color:#C9A25C;font-family:Georgia,serif;font-size:14px;padding:6px 8px;margin-right:10px;">DK</span>
+<img src="cid:firm-logo" width="48" height="48" alt="${esc(site.name)}" style="display:inline-block;width:48px;height:48px;border:0;border-radius:3px;vertical-align:middle;margin-right:12px;">
 <span style="color:#FAF7F0;font-family:Georgia,serif;font-size:18px;vertical-align:middle;">${esc(site.name)}</span>
 </td></tr>
 <tr><td style="padding:32px;font-family:'Segoe UI',Arial,sans-serif;color:#1C1C1A;font-size:15px;line-height:1.7;">

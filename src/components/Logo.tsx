@@ -1,18 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 
-// Placeholder monogram until the firm's logo is supplied. To use the real logo,
-// add it to /public/logo.svg and replace the monogram <span> with next/image.
+// The DRCO mark is navy and gold, so on the navy header and footer it sits on a
+// small ivory tile — otherwise its navy squares disappear into the background.
 export function Logo({ size = "md", tone = "light" }: { size?: "sm" | "md"; tone?: "light" | "dark" }) {
-  const box = size === "sm" ? "size-8 text-[13px]" : "size-10 text-[15px]";
+  const tile = size === "sm" ? "size-11 p-1" : "size-12 p-[5px] lg:size-14";
   const text = size === "sm" ? "text-base" : "text-[19px]";
   return (
     <Link href="/" className="flex items-center gap-3" aria-label={`${site.name} — home`}>
-      <span
-        className={`${box} flex shrink-0 items-center justify-center rounded-[2px] border-[1.5px] border-gold-500 font-serif tracking-wide text-gold-500`}
-        aria-hidden="true"
-      >
-        DK
+      <span className={`${tile} relative block shrink-0 rounded-[3px] ${tone === "light" ? "bg-ivory" : "bg-transparent"}`}>
+        <Image src="/logo.png" alt="" width={56} height={56} priority={size === "md"} className="size-full object-contain" />
       </span>
       <span className={`${text} font-serif leading-tight tracking-[0.02em] ${tone === "light" ? "text-ivory" : "text-navy-900"}`}>
         {site.name}

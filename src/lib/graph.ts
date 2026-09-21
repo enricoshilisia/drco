@@ -1,4 +1,6 @@
 import "server-only";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 
 // Sends email through Microsoft 365 using the Microsoft Graph API with
 // app-only (client credentials) auth. See README → "Microsoft 365 email setup".
@@ -52,6 +54,23 @@ async function getAccessToken() {
 
 const toGraph = (list?: Recipient[]) => list?.map((r) => ({ emailAddress: { address: r.address, name: r.name } }));
 
+// Templates reference the firm logo as <img src="cid:firm-logo">. Embedding it as an
+// inline attachment means it shows even when mail clients block remote images.
+export const LOGO_CID = "firm-logo";
+let logoBase64: string | null = null;
+
+async function logoAttachment() {
+  logoBase64 ??= (await readFile(path.join(process.cwd(), "public", "logo-tile.png"))).toString("base64");
+  return {
+    "@odata.type": "#microsoft.graph.fileAttachment",
+    name: "logo.png",
+    contentType: "image/png",
+    contentBytes: logoBase64,
+    isInline: true,
+    contentId: LOGO_CID,
+  };
+}
+
 export async function sendMail(mail: GraphMail) {
   if (!isGraphConfigured()) {
     // Local development without credentials: log instead of failing the form.
@@ -60,6 +79,7 @@ export async function sendMail(mail: GraphMail) {
   }
 
   const token = await getAccessToken();
+  const attachments = mail.html.includes(`cid:${LOGO_CID}`) ? [await logoAttachment()] : undefined;
   const sender = encodeURIComponent(env("MS_SENDER_MAILBOX"));
   const res = await fetch(`https://graph.microsoft.com/v1.0/users/${sender}/sendMail`, {
     method: "POST",
@@ -72,6 +92,7 @@ export async function sendMail(mail: GraphMail) {
         ccRecipients: toGraph(mail.cc),
         replyTo: toGraph(mail.replyTo),
         importance: mail.importance ?? "normal",
+        attachments,
       },
       saveToSentItems: mail.saveToSentItems ?? true,
     }),
