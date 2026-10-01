@@ -40,7 +40,6 @@ export default function ContactPage() {
               <div>
                 <h2 className="eyebrow mb-2 text-gold-500">Call</h2>
                 <a href={site.phoneHref} className="block font-serif text-2xl text-ivory hover:text-gold-500">{site.phone}</a>
-                <a href={site.phone2Href} className="mt-1 block font-serif text-2xl text-ivory hover:text-gold-500">{site.phone2}</a>
                 <a href={site.mobileHref} className="mt-1 block font-serif text-2xl text-ivory hover:text-gold-500">
                   <span className="mr-2 text-sm font-sans tracking-wide text-gold-500 uppercase">Cell</span>
                   {site.mobile}

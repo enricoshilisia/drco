@@ -22,7 +22,7 @@ export function legalServiceSchema() {
     url: site.url,
     logo: absoluteUrl("/logo.png"),
     image: absoluteUrl("/opengraph-image"),
-    telephone: [site.phone, site.phone2, site.mobile],
+    telephone: [site.phone, site.mobile],
     email: site.email,
     foundingDate: String(site.foundingYear),
     priceRange: "$$",

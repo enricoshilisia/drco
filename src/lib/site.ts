@@ -2,7 +2,7 @@
 // sitemap entry and JSON-LD block reads from this file.
 
 export const site = {
-  name: "DRCO Kenyariri Advocates",
+  name: "DRCO Kenyariri Advocates LLP",
   legalName: "DRCO Kenyariri Advocates LLP",
   tagline: "Considered counsel for consequential matters.",
   description:
@@ -12,8 +12,6 @@ export const site = {
   foundingYear: 2008,
   phone: "+254 (0) 20 22 48 942",
   phoneHref: "tel:+254202248942",
-  phone2: "+254 (0) 20 22 47 871",
-  phone2Href: "tel:+254202247871",
   mobile: "+254 (0) 720 020 444",
   mobileHref: "tel:+254720020444",
   whatsapp: "254720020444", // international format, digits only

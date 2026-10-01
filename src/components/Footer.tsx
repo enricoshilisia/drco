@@ -46,7 +46,6 @@ export function Footer() {
             {site.address.city}, {site.address.countryName}
           </span>
           <a href={site.phoneHref} className={linkCls}>{site.phone}</a>
-          <a href={site.phone2Href} className={linkCls}>{site.phone2}</a>
           <a href={site.mobileHref} className={linkCls}>Cell {site.mobile}</a>
           <a href={`mailto:${site.email}`} className={linkCls}>{site.email}</a>
           {site.hours.map((h) => (

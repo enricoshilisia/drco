@@ -26,9 +26,9 @@ export function Header() {
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:bg-gold-500 focus:px-4 focus:py-2 focus:text-navy-900">
         Skip to content
       </a>
-      <div className="container-x flex items-center justify-between py-4 lg:py-[22px]">
+      <div className="container-x flex items-center justify-between gap-6 py-4 lg:py-[22px]">
         <Logo />
-        <nav aria-label="Main" className="hidden items-center gap-8 lg:flex">
+        <nav aria-label="Main" className="hidden items-center gap-4 lg:flex xl:gap-8">
           {nav.map((item) => {
             const active = pathname.startsWith(item.href);
             return (
@@ -36,13 +36,13 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
-                className={`text-sm tracking-[0.04em] uppercase transition-colors hover:text-gold-500 ${active ? "text-gold-500" : "text-parchment/90"}`}
+                className={`text-[13px] whitespace-nowrap tracking-[0.04em] uppercase transition-colors hover:text-gold-500 xl:text-sm ${active ? "text-gold-500" : "text-parchment/90"}`}
               >
                 {item.label}
               </Link>
             );
           })}
-          <Link href="/contact#consultation" className="btn-gold !px-5 !py-2.5 text-[13px]">
+          <Link href="/contact#consultation" className="btn-gold !px-4 !py-2.5 text-[12px] whitespace-nowrap xl:!px-5 xl:text-[13px]">
             Book a Consultation
           </Link>
         </nav>

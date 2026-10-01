@@ -5,8 +5,8 @@ import { site } from "@/lib/site";
 // The DRCO mark is navy and gold, so on the navy header and footer it sits on a
 // small ivory tile — otherwise its navy squares disappear into the background.
 export function Logo({ size = "md", tone = "light" }: { size?: "sm" | "md"; tone?: "light" | "dark" }) {
-  const tile = size === "sm" ? "size-11 p-1" : "size-12 p-[5px] lg:size-14";
-  const text = size === "sm" ? "text-base" : "text-[19px]";
+  const tile = size === "sm" ? "size-11 p-1" : "size-12 p-[5px] xl:size-14";
+  const text = size === "sm" ? "text-base" : "text-[15px] whitespace-nowrap xl:text-[19px]";
   return (
     <Link href="/" className="flex items-center gap-3" aria-label={`${site.name} — home`}>
       <span className={`${tile} relative block shrink-0 rounded-[3px] ${tone === "light" ? "bg-ivory" : "bg-transparent"}`}>
