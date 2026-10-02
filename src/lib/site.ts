@@ -9,7 +9,7 @@ export const site = {
     "DRCO Kenyariri Advocates LLP is a Nairobi law firm representing individuals, families and enterprises across East Africa in litigation, corporate, property, family, employment and immigration matters.",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.drcokenyaririadvocatesllp.africa").replace(/\/$/, ""),
   locale: "en_KE",
-  foundingYear: 2008,
+  foundingYear: 2001,
   phone: "+254 (0) 20 22 48 942",
   phoneHref: "tel:+254202248942",
   mobile: "+254 (0) 720 020 444",
@@ -43,7 +43,7 @@ export const site = {
     x: "https://x.com/drcokenyariri",
   },
   stats: [
-    { value: "18+", label: "Years in practice" },
+    { value: "25+", label: "Years in practice" },
     { value: "600+", label: "Matters concluded" },
     { value: "3", label: "Countries admitted: KE, UG, TZ" },
     { value: "LSK", label: "Law Society of Kenya members" },

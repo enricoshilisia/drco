@@ -56,7 +56,7 @@ If the `MS_*` variables are missing (for example in local development), emails a
 The site ships with polished demo content so it can be presented. Confirm or replace the following with the firm:
 
 - **Contact details:** confirm the map pin and the email domain in `site.ts`.
-- **Stats strip** ("18+ years", "600+ matters", "3 countries") and **founding year**.
+- **Stats strip**: "25+ years" is confirmed; still confirm "600+ matters" and "3 countries".
 - **Advocates:** David Otieno and Amina Hassan are sample profiles. Also complete Dr. Kenyariri's education and admissions.
 - **Representative results and testimonial:** these must be real and anonymised, and must comply with LSK advertising rules.
 - **Articles:** review them, or replace them with the firm's own.
