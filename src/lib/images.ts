@@ -18,7 +18,7 @@ export const images = {
     { src: unsplash("1497215728101-856f4ea42174"), alt: "Quiet workspace overlooking the city" },
   ],
   practice: {
-    "international-trade-investment": { src: unsplash("1436450412740-6b988f486c6b"), alt: "Columns of a public institution" },
+    "international-economic-investment": { src: unsplash("1436450412740-6b988f486c6b"), alt: "Columns of a public institution" },
     "litigation-dispute-resolution": { src: unsplash("1575505586569-646b2ca898fc"), alt: "Judge's gavel" },
     "corporate-commercial": { src: unsplash("1454165804606-c3d57bc86b40"), alt: "Advisers reviewing transaction documents" },
     "real-estate-conveyancing": { src: unsplash("1450101499163-c8848c66ca85"), alt: "Signing a sale agreement" },

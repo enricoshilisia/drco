@@ -27,7 +27,7 @@ export default function Home() {
           <h1 className="max-w-[780px] text-[40px] leading-[1.1] text-ivory sm:text-[58px]">{site.tagline}</h1>
           <p className="max-w-[580px] text-lg leading-[1.7] font-light text-mist">
             From our Nairobi headquarters we act for individuals, families, investors, corporations and governments worldwide — in
-            international trade and investment law, cross-border transactions, litigation and property matters, with the discretion and
+            international economic and investment law, cross-border transactions, litigation and property matters, with the discretion and
             rigour each case deserves.
           </p>
           <div className="mt-3 flex flex-wrap gap-4">

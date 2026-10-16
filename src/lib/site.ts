@@ -6,7 +6,7 @@ export const site = {
   legalName: "DRCO Kenyariri Advocates LLP",
   tagline: "Considered counsel for consequential matters.",
   description:
-    "DRCO Kenyariri Advocates LLP is an international law firm headquartered in Nairobi, advising individuals, families, investors, corporations and governments worldwide on international trade and investment law, litigation, corporate, property, family, employment and immigration matters.",
+    "DRCO Kenyariri Advocates LLP is an international law firm headquartered in Nairobi, advising individuals, families, investors, corporations and governments worldwide on international economic and investment law, litigation, corporate, property, family, employment and immigration matters.",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.drcokenyaririadvocatesllp.africa").replace(/\/$/, ""),
   locale: "en_KE",
   foundingYear: 2001,

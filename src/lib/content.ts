@@ -16,8 +16,8 @@ export type IconName = "scales" | "briefcase" | "home" | "heart" | "badge" | "gl
 
 export const practiceAreas: PracticeArea[] = [
   {
-    slug: "international-trade-investment",
-    title: "International Trade & Investment Law",
+    slug: "international-economic-investment",
+    title: "International Economic & Investment Law",
     short: "Investment structuring, bilateral investment treaties, trade regulation and investor–state advisory for clients worldwide.",
     icon: "globe",
     intro:
@@ -45,7 +45,7 @@ export const practiceAreas: PracticeArea[] = [
         a: "The African Continental Free Trade Area progressively reduces tariffs and non-tariff barriers between member states. Businesses must meet rules-of-origin requirements to benefit, which we help structure and document.",
       },
     ],
-    keywords: ["investment lawyer Kenya", "international trade law Nairobi", "bilateral investment treaty advice Africa"],
+    keywords: ["international economic law Nairobi", "investment lawyer Kenya", "international trade law Kenya", "bilateral investment treaty advice Africa"],
   },
   {
     slug: "litigation-dispute-resolution",
@@ -265,7 +265,7 @@ export const advocates: Advocate[] = [
     education: ["Doctor of Laws (LL.D), University of South Africa (UNISA), Pretoria"],
     admissions: ["Advocate of the High Court of Kenya"],
     practiceSlugs: [
-      "international-trade-investment",
+      "international-economic-investment",
       "litigation-dispute-resolution",
       "corporate-commercial",
       "real-estate-conveyancing",
@@ -382,7 +382,7 @@ export const posts: Post[] = [
     excerpt: "How investors can use investment treaties, well-drafted contracts and the right holding structure to manage political and regulatory risk.",
     date: "2026-09-02",
     author: "dr-christopher-kenyariri",
-    practice: "international-trade-investment",
+    practice: "international-economic-investment",
     readingMinutes: 7,
     body: [
       { type: "p", text: "Capital flows to jurisdictions where investors understand their rights. Kenya offers a meaningful framework of protection — but the value of that protection depends heavily on decisions made before the first shilling is invested." },

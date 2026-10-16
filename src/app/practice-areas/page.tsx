@@ -10,7 +10,7 @@ import { images } from "@/lib/images";
 export const metadata: Metadata = {
   title: "Practice Areas — International Investment, Litigation, Corporate, Property & Family Law",
   description:
-    "Explore our practice areas: international trade & investment law, litigation, corporate & commercial, real estate & conveyancing, family & succession, employment and immigration law in Kenya.",
+    "Explore our practice areas: international economic & investment law, litigation, corporate & commercial, real estate & conveyancing, family & succession, employment and immigration law in Kenya.",
   alternates: { canonical: "/practice-areas" },
 };
 
