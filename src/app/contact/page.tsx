@@ -22,11 +22,11 @@ export default function ContactPage() {
       />
       <section id="consultation" className="scroll-mt-24 bg-ivory">
         <div className="container-x grid gap-12 py-20 lg:grid-cols-[1.5fr_1fr]">
-          <div>
+          <div className="min-w-0">
             <h2 className="mb-6 text-3xl text-navy-900">Request a consultation</h2>
             <InquiryForm />
           </div>
-          <aside className="flex flex-col gap-6">
+          <aside className="flex min-w-0 flex-col gap-6">
             {site.bookingsUrl && (
               <div className="border border-gold-500 bg-white p-6">
                 <h2 className="text-xl text-navy-900">Prefer to pick a time?</h2>

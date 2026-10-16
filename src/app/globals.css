@@ -36,8 +36,10 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
   body {
+    overflow-x: clip;
     background: var(--color-ivory);
     color: var(--color-ink);
     font-family: var(--font-sans);
@@ -49,6 +51,10 @@
     font-family: var(--font-serif);
     font-weight: 400;
     text-wrap: balance;
+  }
+  a[href^="mailto:"],
+  a[href^="tel:"] {
+    overflow-wrap: anywhere;
   }
   :focus-visible {
     outline: 2px solid var(--color-gold-500);
@@ -80,7 +86,7 @@
     @apply rounded-[3px] border border-line bg-white transition-[border-color,box-shadow] duration-200 hover:border-gold-500 hover:shadow-[0_12px_28px_rgba(15,27,45,0.08)];
   }
   .field {
-    @apply w-full rounded-[2px] border border-line bg-white px-4 py-3 text-[15px] text-ink placeholder:text-stone-light/70 focus:border-gold-600 focus:outline-none;
+    @apply w-full rounded-[2px] border border-line bg-white px-4 py-3 text-base text-ink placeholder:text-stone-light/70 focus:border-gold-600 focus:outline-none sm:text-[15px];
   }
   /* Scroll reveal — only active once JS marks <html class="js">, so content
      stays visible without JS. */
@@ -94,11 +100,17 @@
   .js .reveal-up {
     transform: translateY(28px);
   }
-  .js .reveal-left {
-    transform: translateX(-32px);
-  }
+  .js .reveal-left,
   .js .reveal-right {
-    transform: translateX(32px);
+    transform: translateY(28px);
+  }
+  @media (min-width: 1024px) {
+    .js .reveal-left {
+      transform: translateX(-32px);
+    }
+    .js .reveal-right {
+      transform: translateX(32px);
+    }
   }
   .js .reveal.is-visible {
     opacity: 1;

@@ -27,7 +27,7 @@ export function NewsletterForm() {
           type="email"
           required
           placeholder="you@example.com"
-          className="min-h-11 w-full min-w-0 rounded-l-[2px] border border-navy-600 bg-navy-900 px-3 text-sm text-ivory placeholder:text-slate-dim focus:border-gold-500 focus:outline-none"
+          className="min-h-11 w-full min-w-0 rounded-l-[2px] border border-navy-600 bg-navy-900 px-3 text-base text-ivory placeholder:text-slate-dim focus:border-gold-500 focus:outline-none sm:text-sm"
         />
         <button type="submit" disabled={pending} className="min-h-11 shrink-0 rounded-r-[2px] bg-gold-500 px-4 text-[13px] font-semibold tracking-wide text-navy-900 uppercase hover:bg-gold-400 disabled:opacity-60">
           {pending ? "…" : "Subscribe"}

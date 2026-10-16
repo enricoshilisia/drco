@@ -93,7 +93,7 @@ export function InquiryForm({ defaultPractice = "" }: { defaultPractice?: string
         <div className="flex flex-wrap gap-x-6 gap-y-2">
           {["Phone", "Email", "WhatsApp"].map((m) => (
             <label key={m} className="flex min-h-11 items-center gap-2 text-[15px] text-stone">
-              <input type="radio" name="preferredContact" value={m} defaultChecked={m === "Phone"} className="size-4 accent-gold-600" />
+              <input type="radio" name="preferredContact" value={m} defaultChecked={m === "Phone"} className="size-5 shrink-0 accent-gold-600 sm:size-4" />
               {m}
             </label>
           ))}
@@ -117,7 +117,7 @@ export function InquiryForm({ defaultPractice = "" }: { defaultPractice?: string
       </div>
 
       <label className="flex items-start gap-3 text-[15px] text-stone">
-        <input type="checkbox" name="urgent" className="mt-1 size-4 accent-gold-600" />
+        <input type="checkbox" name="urgent" className="mt-1 size-5 shrink-0 accent-gold-600 sm:size-4" />
         <span>This is urgent (e.g. a court date, arrest or deadline within 7 days)</span>
       </label>
 
@@ -128,7 +128,7 @@ export function InquiryForm({ defaultPractice = "" }: { defaultPractice?: string
           required
           checked={consented}
           onChange={(e) => setConsented(e.target.checked)}
-          className="mt-1 size-4 accent-gold-600"
+          className="mt-1 size-5 shrink-0 accent-gold-600 sm:size-4"
           aria-invalid={!!fe.consent}
         />
         <span>
