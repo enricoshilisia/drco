@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About the Firm",
   description:
-    "DRCO Kenyariri Advocates LLP is a Nairobi law firm founded by Dr. Christopher O. Kenyariri, LL.D. Learn about our approach, values and commitment to clients across East Africa.",
+    "DRCO Kenyariri Advocates LLP is an international law firm headquartered in Nairobi, founded by Dr. Christopher O. Kenyariri, LL.D. Learn about our approach, values and global practice.",
   alternates: { canonical: "/about" },
 };
 
@@ -27,7 +27,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Our Firm"
         title="Built on judgment, not volume."
-        intro={`${site.legalName} combines international expertise with a personal, partner-led practice in Nairobi.`}
+        intro={`${site.legalName} combines a global practice in international economic and investment law with the attention of a personal, partner-led firm.`}
         crumbs={[{ name: "About", path: "/about" }]}
         photo={images.office[0]}
       />
@@ -44,8 +44,8 @@ export default function AboutPage() {
             </p>
             <p>
               We deliberately limit the number of matters we take on, so that each receives the attention of an advocate who knows it in
-              full. Our clients include individuals, families, investors, companies and public bodies across Kenya and the East African
-              region.
+              full. Our clients include individuals, families, investors, multinational companies and public bodies in Kenya and across
+              Africa, Europe, the Middle East and Asia.
             </p>
             <Link href="/advocates/dr-christopher-kenyariri" className="mt-2 inline-flex items-center gap-2 text-sm font-medium tracking-[0.03em] text-gold-700 uppercase">
               Meet our founding partner <ArrowRight />

@@ -6,7 +6,7 @@ export const site = {
   legalName: "DRCO Kenyariri Advocates LLP",
   tagline: "Considered counsel for consequential matters.",
   description:
-    "DRCO Kenyariri Advocates LLP is a Nairobi law firm representing individuals, families and enterprises across East Africa in litigation, corporate, property, family, employment and immigration matters.",
+    "DRCO Kenyariri Advocates LLP is an international law firm headquartered in Nairobi, advising individuals, families, investors, corporations and governments worldwide on international trade and investment law, litigation, corporate, property, family, employment and immigration matters.",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.drcokenyaririadvocatesllp.africa").replace(/\/$/, ""),
   locale: "en_KE",
   foundingYear: 2001,
@@ -14,8 +14,9 @@ export const site = {
   phoneHref: "tel:+254202248942",
   mobile: "+254 (0) 720 020 444",
   mobileHref: "tel:+254720020444",
-  whatsapp: "254720020444", // international format, digits only
-  email: "info@drcokenyaririadvocatesllp.africa",
+  whatsapp: "254722880881", // WhatsApp, international format, digits only
+  whatsappDisplay: "+254 (0) 722 880 881",
+  email: "kenyariri@drcokenyaririadvocatesllp.africa",
   // Address for data-protection requests under the Data Protection Act, 2019.
   privacyEmail: "legal@drcokenyaririadvocatesllp.africa",
   address: {
@@ -34,6 +35,8 @@ export const site = {
     { dayOfWeek: ["Saturday"], opens: "09:00", closes: "13:00" },
   ],
   areaServed: ["Kenya", "Uganda", "Tanzania"],
+  // Global positioning: Nairobi-headquartered, instructed internationally.
+  servesWorldwide: true,
   // Microsoft Bookings page (included with Microsoft 365 Business). Leave empty to hide.
   bookingsUrl: process.env.NEXT_PUBLIC_BOOKINGS_URL ?? "",
   mapEmbedUrl:
@@ -45,7 +48,7 @@ export const site = {
   stats: [
     { value: "25+", label: "Years in practice" },
     { value: "600+", label: "Matters concluded" },
-    { value: "3", label: "Countries admitted: KE, UG, TZ" },
+    { value: "3", label: "Jurisdictions admitted: KE, UG, TZ" },
     { value: "LSK", label: "Law Society of Kenya members" },
   ],
 } as const;

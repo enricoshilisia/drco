@@ -17,17 +17,18 @@ export default function Home() {
 
       {/* HERO */}
       <section className="relative isolate overflow-hidden bg-navy-900">
-        <Image src={images.hero.src} alt={images.hero.alt} fill priority sizes="100vw" className="-z-10 object-cover opacity-35" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-900 via-navy-900/90 to-navy-900/30" />
+        <Image src={images.hero.src} alt={images.hero.alt} fill priority sizes="100vw" className="-z-10 object-cover opacity-55" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-900/95 via-navy-900/80 to-navy-900/25" />
         <div className="container-x flex flex-col items-start gap-7 py-24 lg:py-32">
           <div className="flex items-center gap-3.5">
             <span className="h-0.5 w-10 bg-gold-500" />
-            <span className="eyebrow text-gold-500">Advocates &amp; Legal Consultants · Nairobi</span>
+            <span className="eyebrow text-gold-500">International Advocates &amp; Legal Consultants · Nairobi</span>
           </div>
           <h1 className="max-w-[780px] text-[40px] leading-[1.1] text-ivory sm:text-[58px]">{site.tagline}</h1>
           <p className="max-w-[580px] text-lg leading-[1.7] font-light text-mist">
-            {site.name} represents individuals, families, investors and enterprises across East Africa in international investment,
-            litigation, commercial and property matters — with the discretion and rigour each case deserves.
+            From our Nairobi headquarters we act for individuals, families, investors, corporations and governments worldwide — in
+            international trade and investment law, cross-border transactions, litigation and property matters, with the discretion and
+            rigour each case deserves.
           </p>
           <div className="mt-3 flex flex-wrap gap-4">
             <Link href="/contact#consultation" className="btn-gold">Schedule a Consultation</Link>
@@ -84,7 +85,8 @@ export default function Home() {
               limited number of matters at any time, so every client works directly with an advocate who knows their case in full.
             </p>
             <p className="text-base leading-[1.8] font-light text-mist">
-              We regularly advise on cross-border commercial, investment and property matters across East Africa.
+              We act for clients across Africa, Europe, the Middle East and Asia, and work alongside counsel in other jurisdictions
+              wherever a matter crosses borders.
             </p>
             <Link href="/about" className="mt-2 flex items-center gap-2.5 text-sm font-medium tracking-[0.03em] text-gold-500 uppercase hover:text-gold-400">
               About the Firm <ArrowRight />
@@ -146,21 +148,44 @@ export default function Home() {
       {/* ADVOCATES */}
       <section className="bg-white">
         <div className="container-x py-24">
-          <SectionHeading eyebrow="Our People" title="Advocates" />
-          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-            {advocates.map((a, i) => (
-              <Reveal key={a.slug} delay={i * 120}><Link href={`/advocates/${a.slug}`} className="group flex flex-col gap-4">
-                <Portrait name={a.name} className="transition-colors group-hover:bg-parchment" />
-                <div className="flex flex-col gap-1">
-                  <h3 className="text-[19px] font-medium text-navy-900 group-hover:text-gold-700">{a.name}</h3>
-                  <span className="text-[13px] tracking-[0.03em] text-gold-700">
-                    {a.role} · {a.focus}
-                  </span>
-                  <span className="mt-1.5 text-[13px] text-stone-light">{a.credentials}</span>
-                </div>
-              </Link></Reveal>
-            ))}
-          </div>
+          <SectionHeading eyebrow="Our People" title={advocates.length === 1 ? "Your advocate" : "Advocates"} />
+          {advocates.length === 1 ? (
+            // Single advocate: a feature row reads better than a lone card in a grid.
+            <div className="grid items-center gap-12 lg:grid-cols-[320px_1fr]">
+              <Reveal from="left">
+                <Portrait name={advocates[0].name} className="border border-line" />
+              </Reveal>
+              <Reveal from="right" delay={120} className="flex flex-col gap-4">
+                <h3 className="text-3xl text-navy-900">{advocates[0].name}</h3>
+                <span className="text-[13px] tracking-[0.03em] text-gold-700 uppercase">
+                  {advocates[0].role} · {advocates[0].focus}
+                </span>
+                <span className="text-[15px] text-stone-light">{advocates[0].credentials}</span>
+                <p className="max-w-[620px] text-base leading-[1.8] text-ink-soft">{advocates[0].bio[1] ?? advocates[0].bio[0]}</p>
+                <Link
+                  href={`/advocates/${advocates[0].slug}`}
+                  className="mt-2 flex items-center gap-2.5 text-sm font-medium tracking-[0.03em] text-gold-700 uppercase hover:text-gold-600"
+                >
+                  Full profile <ArrowRight />
+                </Link>
+              </Reveal>
+            </div>
+          ) : (
+            <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+              {advocates.map((a, i) => (
+                <Reveal key={a.slug} delay={i * 120}><Link href={`/advocates/${a.slug}`} className="group flex flex-col gap-4">
+                  <Portrait name={a.name} className="transition-colors group-hover:bg-parchment" />
+                  <div className="flex flex-col gap-1">
+                    <h3 className="text-[19px] font-medium text-navy-900 group-hover:text-gold-700">{a.name}</h3>
+                    <span className="text-[13px] tracking-[0.03em] text-gold-700">
+                      {a.role} · {a.focus}
+                    </span>
+                    <span className="mt-1.5 text-[13px] text-stone-light">{a.credentials}</span>
+                  </div>
+                </Link></Reveal>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

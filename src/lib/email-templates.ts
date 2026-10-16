@@ -97,7 +97,7 @@ export function newsletterNotificationEmail(email: string) {
 export function newsletterWelcomeEmail() {
   return layout(
     "You're subscribed to our legal updates",
-    `<p>Thank you for subscribing. We publish short, practical notes on changes in Kenyan and East African law that affect individuals and businesses.</p>
+    `<p>Thank you for subscribing. We publish short, practical notes on developments in Kenyan and international law that affect individuals, investors and businesses.</p>
 <p>You can unsubscribe at any time by replying to this email with “unsubscribe”.</p>
 <p>Kind regards,<br>${esc(site.name)}</p>`,
   );

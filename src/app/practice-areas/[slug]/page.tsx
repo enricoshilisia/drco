@@ -106,7 +106,7 @@ export default async function PracticePage({ params }: PageProps<"/practice-area
           <aside className="flex flex-col gap-8 lg:sticky lg:top-28 lg:self-start">
             {team.length > 0 && (
               <div className="border border-line bg-white p-6">
-                <h2 className="eyebrow mb-5 text-gold-700">Your advocates</h2>
+                <h2 className="eyebrow mb-5 text-gold-700">{team.length === 1 ? "Your advocate" : "Your advocates"}</h2>
                 <ul className="flex flex-col gap-5">
                   {team.map((a) => (
                     <li key={a.slug}>

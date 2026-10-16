@@ -18,21 +18,21 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "international-trade-investment",
     title: "International Trade & Investment Law",
-    short: "Investment structuring, bilateral investment treaties, trade regulation and investor–state advisory across Africa.",
+    short: "Investment structuring, bilateral investment treaties, trade regulation and investor–state advisory for clients worldwide.",
     icon: "globe",
     intro:
-      "Led by our founding partner, an International Economic Law and Investment Law consultant, we advise governments, investors and enterprises on the legal frameworks that govern cross-border trade and investment into Kenya and the wider African continent.",
+      "Led by our founding partner, an International Economic Law and Investment Law consultant, we advise governments, sovereign wealth funds, investors and multinational enterprises on the legal frameworks that govern cross-border trade and investment — into Kenya, across Africa and between continents.",
     services: [
       "Foreign direct investment structuring and market entry",
       "Bilateral investment treaties and investor protections",
       "Investor–state dispute prevention and advisory",
-      "EAC, COMESA and AfCFTA trade regulation",
+      "WTO, AfCFTA, EAC and COMESA trade regulation",
       "Public–private partnerships and concession agreements",
       "Policy and legislative advisory on investment law",
     ],
     whyUs: [
       "Doctoral-level expertise in international economic and investment law",
-      "Practical understanding of how treaty protections apply on the ground in East Africa",
+      "Practical understanding of how international treaty protections apply on the ground in emerging markets",
       "Advice that connects regulatory, commercial and dispute risk",
     ],
     faqs: [
@@ -50,10 +50,10 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "litigation-dispute-resolution",
     title: "Litigation & Dispute Resolution",
-    short: "Civil and commercial litigation, arbitration and mediation before Kenyan courts and regional tribunals.",
+    short: "Civil and commercial litigation, arbitration and mediation before Kenyan courts and international tribunals.",
     icon: "scales",
     intro:
-      "When a dispute cannot be resolved at the table, you need advocates who prepare every matter as though it will go to full hearing. We represent clients before the High Court, the Court of Appeal, the Supreme Court, the Environment and Land Court and arbitral tribunals across East Africa.",
+      "When a dispute cannot be resolved at the table, you need advocates who prepare every matter as though it will go to full hearing. We represent clients before the High Court, the Court of Appeal, the Supreme Court, the Environment and Land Court, and before regional and international arbitral tribunals.",
     services: [
       "Commercial and contractual disputes",
       "Debt recovery and insolvency proceedings",
@@ -65,7 +65,7 @@ export const practiceAreas: PracticeArea[] = [
     whyUs: [
       "Early case assessment with a candid view of risk, cost and timelines",
       "Partner-led advocacy from first instruction to judgment",
-      "Experience before regional tribunals, including the East African Court of Justice",
+      "Experience before regional and international tribunals, including the East African Court of Justice",
     ],
     faqs: [
       {
@@ -85,7 +85,7 @@ export const practiceAreas: PracticeArea[] = [
     short: "Company formation, mergers and acquisitions, contracts, compliance and cross-border transactions.",
     icon: "briefcase",
     intro:
-      "We advise founders, family businesses, investors and multinational groups on the full life cycle of an enterprise in East Africa — from incorporation and governance to financing, acquisitions and exit.",
+      "We advise founders, family businesses, investors and multinational groups on the full life cycle of an enterprise — from incorporation and governance to financing, cross-border acquisitions and exit — in Kenya and in the jurisdictions they expand into.",
     services: [
       "Company incorporation and restructuring",
       "Mergers, acquisitions and due diligence",
@@ -95,7 +95,7 @@ export const practiceAreas: PracticeArea[] = [
       "Competition Authority of Kenya filings",
     ],
     whyUs: [
-      "Advocates admitted in Kenya and Uganda for cross-border transactions",
+      "Advocates admitted in Kenya and Uganda, working with trusted counsel in other jurisdictions",
       "Commercially grounded advice, delivered on your deal timetable",
       "Fixed-fee options for defined transactional work",
     ],
@@ -248,6 +248,8 @@ export type Advocate = {
   admissions: string[];
   practiceSlugs: string[];
   email: string;
+  /** Optional link to this advocate's entries in a public court-judgment directory. */
+  courtRecordUrl?: string;
 };
 
 export const advocates: Advocate[] = [
@@ -259,41 +261,22 @@ export const advocates: Advocate[] = [
     credentials: "LL.D (University of South Africa, Pretoria)",
     bio: [
       "Dr. Christopher O. Kenyariri is the founding partner of DRCO Kenyariri Advocates LLP. He holds a Doctor of Laws (LL.D) from the University of South Africa, Pretoria, and is an International Economic Law and Investment Law consultant.",
-      "His practice sits at the intersection of law, trade and capital. He advises investors, enterprises and public bodies on structuring investments into Kenya and the wider region, on the protections available under investment treaties and regional trade instruments, and on managing regulatory and dispute risk across borders.",
+      "His practice sits at the intersection of law, trade and capital. He advises investors, multinational enterprises, governments and public bodies on structuring investments into Kenya and across Africa, on the protections available under international investment treaties and trade instruments, and on managing regulatory and dispute risk across borders.",
       "Clients value his ability to translate complex international frameworks into clear, practical advice — and his insistence on candour about risk. He leads the firm's strategy and remains personally involved in its most significant instructions.",
     ],
     education: ["Doctor of Laws (LL.D), University of South Africa (UNISA), Pretoria"],
     admissions: ["Advocate of the High Court of Kenya"],
-    practiceSlugs: ["international-trade-investment", "corporate-commercial", "litigation-dispute-resolution"],
+    practiceSlugs: [
+      "international-trade-investment",
+      "litigation-dispute-resolution",
+      "corporate-commercial",
+      "real-estate-conveyancing",
+      "family-succession",
+      "employment-labour",
+      "immigration-regulatory",
+    ],
     email: "kenyariri@drcokenyaririadvocatesllp.africa",
-  },
-  {
-    slug: "david-otieno",
-    name: "David Otieno",
-    role: "Partner",
-    focus: "Corporate & Commercial",
-    credentials: "LL.M (London), Admitted in Kenya & Uganda",
-    bio: [
-      "David leads the corporate and commercial practice, advising on transactions, governance and cross-border investment. He is known for keeping complex deals on schedule and for commercially grounded advice that boards can act on.",
-    ],
-    education: ["LL.M, University of London", "LL.B, University of Nairobi"],
-    admissions: ["Advocate of the High Court of Kenya", "Advocate of the High Court of Uganda"],
-    practiceSlugs: ["corporate-commercial", "immigration-regulatory"],
-    email: "david@drcokenyaririadvocatesllp.africa",
-  },
-  {
-    slug: "amina-hassan",
-    name: "Amina Hassan",
-    role: "Senior Associate",
-    focus: "Family & Succession",
-    credentials: "LL.B (Moi), Advocate of the High Court of Kenya",
-    bio: [
-      "Amina advises individuals and families on matrimonial matters, children's matters and the administration of estates. She brings calm judgment to sensitive matters and a strong preference for resolutions that protect children and family relationships.",
-    ],
-    education: ["LL.B, Moi University", "Postgraduate Diploma in Law, Kenya School of Law"],
-    admissions: ["Advocate of the High Court of Kenya"],
-    practiceSlugs: ["family-succession", "employment-labour"],
-    email: "amina@drcokenyaririadvocatesllp.africa",
+    courtRecordUrl: "https://sheriahub.com/cases/ke/disputant/Christopher+O.+Kenyariri/1",
   },
 ];
 
@@ -334,7 +317,7 @@ export const generalFaqs = [
   },
   {
     q: "Do you act for clients outside Kenya?",
-    a: "Yes. Our advocates are admitted in Kenya, Uganda and Tanzania, and we regularly act for clients in the diaspora and international companies investing in East Africa. Consultations can be held by Microsoft Teams.",
+    a: "Yes. We act for clients across Africa, Europe, the Middle East, Asia and the Americas, including the Kenyan diaspora and multinational companies investing into the region. Consultations are held by Microsoft Teams across time zones, and we work alongside local counsel wherever a matter requires it.",
   },
   {
     q: "What should I bring to my first consultation?",
@@ -382,7 +365,7 @@ export const posts: Post[] = [
     title: "Data Protection Act, 2019: What Kenyan SMEs Must Do Now",
     excerpt: "Registration with the ODPC, lawful bases for processing and the practical steps that reduce regulatory risk.",
     date: "2026-07-03",
-    author: "david-otieno",
+    author: "dr-christopher-kenyariri",
     practice: "corporate-commercial",
     readingMinutes: 5,
     body: [

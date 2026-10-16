@@ -52,7 +52,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="eyebrow mb-2 text-gold-500">WhatsApp</h2>
                 <a href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-ivory hover:text-gold-500">
-                  Message us on WhatsApp
+                  {site.whatsappDisplay}
                 </a>
               </div>
               <div>

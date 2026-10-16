@@ -20,7 +20,7 @@ export default function PracticeAreasPage() {
       <PageHero
         eyebrow="What We Do"
         title="Practice areas"
-        intro="Focused expertise across the matters that most affect individuals, families and enterprises in East Africa."
+        intro="Focused expertise across the matters that most affect individuals, families, investors and enterprises — in Kenya and across borders."
         crumbs={[{ name: "Practice Areas", path: "/practice-areas" }]}
         photo={images.library}
       />

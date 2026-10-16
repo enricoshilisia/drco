@@ -8,7 +8,7 @@ import { images } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Legal Insights — Kenyan Law Explained",
-  description: "Practical articles on Kenyan and East African law: investment, property, corporate compliance, employment, family and succession.",
+  description: "Practical articles on Kenyan and international law: trade and investment, property, corporate compliance, employment, family and succession.",
   alternates: { canonical: "/insights" },
 };
 
@@ -21,7 +21,7 @@ export default function InsightsPage() {
       <PageHero
         eyebrow="Insights"
         title="Legal insights"
-        intro="Clear, practical notes on the legal developments that matter to individuals, investors and businesses in East Africa."
+        intro="Clear, practical notes on the legal developments that matter to individuals, investors and businesses in Kenya and worldwide."
         crumbs={[{ name: "Insights", path: "/insights" }]}
         photo={images.library}
       />

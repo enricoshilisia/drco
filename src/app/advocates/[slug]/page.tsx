@@ -58,6 +58,26 @@ export default async function AdvocatePage({ params }: PageProps<"/advocates/[sl
               <a href={`mailto:${a.email}`} className="text-gold-700 hover:underline">{a.email}</a>
               <Link href="/contact#consultation" className="btn-navy mt-2 w-full">Book a consultation</Link>
             </div>
+            {a.courtRecordUrl && (
+              <div className="flex flex-col gap-2 border border-line bg-white p-6">
+                <h2 className="eyebrow text-gold-700">Public record</h2>
+                <p className="text-[14px] leading-relaxed text-stone">
+                  Kenyan judgments and rulings are published in the national law reports. Matters recorded in {a.name.split(" ").slice(-1)}&apos;s
+                  name can be searched on SheriaHub, an independent case directory.
+                </p>
+                <a
+                  href={a.courtRecordUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 inline-flex items-center gap-2 text-[13px] font-medium tracking-[0.03em] text-gold-700 uppercase hover:text-gold-600"
+                >
+                  Search the case directory
+                  <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <path d="M7 17 17 7M9 7h8v8" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            )}
           </div>
           <div className="pt-4 lg:pt-12">
             <span className="eyebrow text-gold-700">{a.role}</span>

@@ -121,12 +121,10 @@ export function FaqList({ faqs }: { faqs: { q: string; a: string }[] }) {
 }
 
 export function Portrait({ name, className = "" }: { name: string; className?: string }) {
-  // Placeholder until professional headshots are supplied.
-  const initials = name
-    .split(/\s+/)
-    .map((w) => w[0])
-    .join("")
-    .slice(0, 2);
+  // Placeholder until professional headshots are supplied. Honorifics and middle
+  // initials are skipped, so "Dr. Christopher O. Kenyariri" gives "CK".
+  const parts = name.split(/\s+/).filter((w) => !/^(dr|mr|mrs|ms|prof|hon|adv)\.?$/i.test(w) && !/^[A-Za-z]\.$/.test(w));
+  const initials = ((parts[0]?.[0] ?? "") + (parts.length > 1 ? (parts.at(-1)?.[0] ?? "") : "")).toUpperCase();
   return (
     <div className={`flex aspect-[3/4] w-full items-center justify-center rounded-[3px] bg-sand ${className}`} role="img" aria-label={name}>
       <span className="font-serif text-5xl text-gold-600/70">{initials}</span>
