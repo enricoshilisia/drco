@@ -256,14 +256,14 @@ export const advocates: Advocate[] = [
     name: "Dr. Christopher O. Kenyariri",
     role: "Founding Partner",
     focus: "International Economic & Investment Law",
-    credentials: "LL.D (University of South Africa, Pretoria)",
+    credentials: "LLD (University of South Africa, Pretoria) · Chartered Arbitrator & Mediator",
     bio: [
-      "Dr. Christopher O. Kenyariri is the founding partner of DRCO Kenyariri Advocates LLP. He holds a Doctor of Laws (LL.D) from the University of South Africa, Pretoria, and is an International Economic Law and Investment Law consultant.",
+      "Dr. Christopher O. Kenyariri is the founding partner of DRCO Kenyariri Advocates LLP. He holds a Doctor of Laws (LLD) from the University of South Africa, Pretoria, and is an International Economic Law and Investment Law consultant.",
       "His practice sits at the intersection of law, trade and capital. He advises investors, multinational enterprises, governments and public bodies on structuring investments into Kenya and across Africa, on the protections available under international investment treaties and trade instruments, and on managing regulatory and dispute risk across borders.",
       "Clients value his ability to translate complex international frameworks into clear, practical advice — and his insistence on candour about risk. He leads the firm's strategy and remains personally involved in its most significant instructions.",
     ],
-    education: ["Doctor of Laws (LL.D), University of South Africa (UNISA), Pretoria"],
-    admissions: ["Advocate of the High Court of Kenya"],
+    education: ["Doctor of Laws (LLD), University of South Africa (UNISA), Pretoria"],
+    admissions: ["Advocate of the High Court of Kenya", "Chartered Arbitrator", "Accredited Mediator"],
     practiceSlugs: [
       "international-economic-investment",
       "litigation-dispute-resolution",

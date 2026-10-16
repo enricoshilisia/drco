@@ -9,7 +9,7 @@ import { images } from "@/lib/images";
 export const metadata: Metadata = {
   title: "Our Advocates",
   description:
-    "Meet the advocates of DRCO Kenyariri Advocates LLP, led by founding partner Dr. Christopher O. Kenyariri, LL.D — international economic and investment law consultant.",
+    "Meet the advocates of DRCO Kenyariri Advocates LLP, led by founding partner Dr. Christopher O. Kenyariri, LLD — international economic and investment law consultant.",
   alternates: { canonical: "/advocates" },
 };
 

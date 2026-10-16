@@ -5,8 +5,10 @@ export const site = {
   name: "DRCO Kenyariri Advocates LLP",
   legalName: "DRCO Kenyariri Advocates LLP",
   tagline: "Considered counsel for consequential matters.",
+  // How the firm styles itself professionally, used in straplines and page titles.
+  styling: "Advocates, Chartered Arbitrators & Mediators",
   description:
-    "DRCO Kenyariri Advocates LLP is an international law firm headquartered in Nairobi, advising individuals, families, investors, corporations and governments worldwide on international economic and investment law, litigation, corporate, property, family, employment and immigration matters.",
+    "DRCO Kenyariri Advocates LLP is an international firm of advocates, chartered arbitrators and mediators headquartered in Nairobi, advising individuals, families, investors, corporations and governments worldwide on international economic and investment law, litigation, corporate, property, family, employment and immigration matters.",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.drcokenyaririadvocatesllp.africa").replace(/\/$/, ""),
   locale: "en_KE",
   foundingYear: 2001,

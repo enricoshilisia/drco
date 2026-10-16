@@ -22,7 +22,7 @@ export default function Home() {
         <div className="container-x flex flex-col items-start gap-7 py-24 lg:py-32">
           <div className="flex items-center gap-3.5">
             <span className="h-0.5 w-10 bg-gold-500" />
-            <span className="eyebrow text-gold-500">International Advocates &amp; Legal Consultants · Nairobi</span>
+            <span className="eyebrow text-gold-500">{site.styling} · Nairobi</span>
           </div>
           <h1 className="max-w-[780px] text-[40px] leading-[1.1] text-ivory sm:text-[58px]">{site.tagline}</h1>
           <p className="max-w-[580px] text-lg leading-[1.7] font-light text-mist">

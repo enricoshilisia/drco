@@ -13,7 +13,7 @@ const workSans = Work_Sans({ variable: "--font-work-sans", subsets: ["latin"], d
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} | Advocates & Legal Consultants in Nairobi, Kenya`,
+    default: `${site.name} | ${site.styling} in Nairobi, Kenya`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     locale: site.locale,
     url: site.url,
     siteName: site.name,
-    title: `${site.name} | Advocates & Legal Consultants`,
+    title: `${site.name} | ${site.styling}`,
     description: site.description,
   },
   twitter: { card: "summary_large_image", title: site.name, description: site.description },
