@@ -248,8 +248,6 @@ export type Advocate = {
   admissions: string[];
   practiceSlugs: string[];
   email: string;
-  /** Optional link to this advocate's entries in a public court-judgment directory. */
-  courtRecordUrl?: string;
 };
 
 export const advocates: Advocate[] = [
@@ -276,7 +274,6 @@ export const advocates: Advocate[] = [
       "immigration-regulatory",
     ],
     email: "kenyariri@drcokenyaririadvocatesllp.africa",
-    courtRecordUrl: "https://sheriahub.com/cases/ke/disputant/Christopher+O.+Kenyariri/1",
   },
 ];
 
